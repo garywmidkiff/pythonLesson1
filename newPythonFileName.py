@@ -1,3 +1,71 @@
+# Deliberate use of poor coding style is often done intentionally to learn what Python can and cannot handle for syntax.  Test.
+
+
+
+
+# Functions
+def FuncName(name, age, age_num):
+    # must be indented
+    print("hello " + name + " you are " + age + " or said otherwise, " + str(age_num))
+
+FuncName("Mike", "70", 3)
+
+
+def cube(num):
+    return num*num*num
+
+print(cube(3))
+
+result = cube(4)
+print(result)
+
+
+isMale = False
+isTall = True
+
+if isMale or isTall:
+    print("am male or tall")
+    print("I said u r male or tall.")
+else:
+    print("not male")
+
+if isMale and isTall:
+    print("male and tall")
+elif isMale and not(isTall):
+    print("short male")
+elif not(isMale) and isTall:
+    print("tall female")
+else:
+    print("both false")
+
+
+
+exit()
+
+
+
+
+
+
+
+
+
+# Tuples are immutable.
+coordinates = (4, 5) # use [] for lists, () for tuples.  Use tuples for data that's not going to change.
+print(coordinates[0])
+
+# here's a list of tuples:
+listOfTuples = [(4,5), (6,7), (80,34)]
+
+
+exit()
+
+
+
+
+
+
+
 
 # lists....
 list_of_peeps = ["ads", "joe", "dave", "john", "blah Blah Sr."]
@@ -27,9 +95,11 @@ listOfNums = [6,4,34,22,1,0]
 print(listOfNums)
 listOfNums.sort()
 print(listOfNums)
-print(list_of_peeps)
 listOfNums.reverse()
 print(listOfNums)
+SecondListOfNums = listOfNums.copy()
+print(SecondListOfNums)
+
 
 
 list_of_peeps.clear()
