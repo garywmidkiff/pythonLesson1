@@ -2,6 +2,67 @@
 
 
 
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+
+print ("done with loop")
+
+
+exit()
+
+
+
+
+# Dictionaries use curly braces
+monthConversions = {
+    "Jan" : "January",
+    "Feb": "February",
+    "Mar": "March",
+}
+
+print(monthConversions["Mar"])
+print(monthConversions.get("Feb"))
+print(monthConversions.get("Apr"))
+print(monthConversions.get("Apr", "Not a valid key"))
+
+
+exit()
+
+
+
+# skipping this next experiment....  too basic, like much of this course.
+num1 = float(input("Enter first number: "))
+op = (input("Enter operator: "))
+num2 = float(input("Enter second number: "))
+
+# if op == "+":
+
+
+
+
+
+
+
+
+
+
+def maxnum(num1, num2, num3):
+    if num1 >= num2 and num1 >= num3:
+        return num1
+    elif num2 >= num1 and num2 >= num3:
+        return num2
+    else:
+        return num3
+
+if ("dog" == "dog"):
+    print("eval'd to true")
+
+
+print(maxnum(3,40,5))
+exit()
+
 
 # Functions
 def FuncName(name, age, age_num):
