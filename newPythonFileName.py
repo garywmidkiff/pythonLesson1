@@ -1,6 +1,156 @@
 # Deliberate use of poor coding style is often done intentionally to learn what Python can and cannot handle for syntax.  Test.
 
+# writing to files
+employee_file = open("employees.txt", "w") # w for write, a for append, r+ for read and write
+employee_file.write("Toby - Human Resources")
+employee_file.close()
+exit()
 
+
+
+
+
+
+
+
+
+# reading from files
+employee_file = open("employees.txt", "r") # w for write, a for append, r+ for read and write
+
+print(employee_file.readable())
+# print(employee_file.readlines()[4])
+# listoflines = employee_file.readlines()
+# print(listoflines[3])
+print(employee_file.readlines())
+# print(employee_file.read())
+# print(employee_file.readline())
+
+employee_file.close()
+
+
+
+employee_file = open("employees.txt", "r") # w for write, a for append, r+ for read and write
+print(employee_file.readable())
+for line in employee_file.readlines():
+    print(line)
+
+employee_file.close()
+
+
+exit()
+
+
+
+# try/except
+try:
+    value = 10/0
+    number = int(input("Enter a number: "))
+    print(number)
+except ZeroDivisionError as err:
+    print("ZeroDivisionError exception was thrown and caught")
+    print(err)
+except ValueError as err:
+    print("ValueError exception was thrown and caught")
+    print(err)
+
+exit()
+
+'''
+How to
+do mulit-line
+comments
+'''
+# translator
+def translate(phrase):
+    translation = ""
+    for letter in phrase:
+        # if letter in "AEIOUaeiou":
+        if letter.lower() in "aeiou":
+            if letter.isupper(): # <---  doesn't change the value stored in letter, merely returns the upper...
+                translation = translation + "G"
+            else:
+                translation = translation + "g"
+        else:
+            translation = translation + letter
+
+    return translation
+
+print(translate(input("Enter a phrase: ")))
+
+exit()
+
+
+
+
+# 2D lists and nested loops
+numberGrid = [
+    [0, 1, 2, 3],
+    [4,5,6],
+    [7,8,9],
+    [10]
+]
+print(numberGrid[0][1])
+
+# Let's print all the values - the stoopid way
+for slowIndex in range(len(numberGrid)):
+    for fastIndex in range(len(numberGrid[slowIndex])):
+        print(numberGrid[slowIndex][fastIndex])
+
+# a cooler way
+for row in numberGrid:
+    for col in row:
+        print(col)
+
+exit()
+
+
+print(pow(2,3))
+print(2**-3)
+
+exit()
+
+
+
+friends = ["Jim", "John", "Karen", "Jason", "Joe"]
+for index in range(len(friends)): # len returns 5 conveniently considering how range is working, non-inclusive of the
+                                  # last element from what I had expected to happen.
+    print(friends[index])
+
+exit()
+
+for index in range(3, 10): # prints from 3-9
+    print(index)
+
+for index in range(10): # prints from 0-9
+    print(index)
+
+exit()
+
+
+
+
+# Tuples are immutable.
+coordinates = (4, 5) # use [] for lists, () for tuples.  Use tuples for data that's not going to change.
+other_coordinates = (4, 5, 6, 7, 8) # use [] for lists, () for tuples.  Use tuples for data that's not going to change.
+print(other_coordinates[2])
+
+# here's a list of tuples:
+listOfTuples = [(4,5), (6,7), (80,34)]
+print(listOfTuples[2])
+print(listOfTuples[2][1])
+
+exit()
+
+
+
+
+
+for letter in "Giraffe Academy":
+    print(letter)
+
+
+
+exit()
 
 i = 1
 while i <= 10:
