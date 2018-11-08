@@ -1,5 +1,33 @@
 # Deliberate use of poor coding style is often done intentionally to learn what Python can and cannot handle for syntax.  Test.
 
+
+class Student:
+    def __init__(self, name, major, gpa, is_on_probation):
+        self.name = name
+        self.major = major
+        self.gpa = gpa
+        self.is_on_probation = is_on_probation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Modules and Pip
+
+
+
+
 # writing to files
 employee_file = open("employees.txt", "w") # w for write, a for append, r+ for read and write
 employee_file.write("Toby - Human Resources")
