@@ -1,14 +1,12 @@
 # Deliberate use of poor coding style is often done intentionally to learn what Python can and cannot handle for syntax.  Test.
 
+from StudentFile import StudentClass
 
-class Student:
-    def __init__(self, name, major, gpa, is_on_probation):
-        self.name = name
-        self.major = major
-        self.gpa = gpa
-        self.is_on_probation = is_on_probation
+student1 = StudentClass("Jim", "Business", 3.1, False)
 
+print(student1.major)
 
+exit()
 
 
 
